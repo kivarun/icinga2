@@ -70,10 +70,8 @@ size_t FIFO::Peek(void *buffer, size_t count, bool allow_partial)
 /**
  * Implements IOQueue::Read.
  */
-size_t FIFO::Read(void *buffer, size_t count, bool allow_partial)
+size_t FIFO::Read(void *buffer, size_t count)
 {
-	ASSERT(allow_partial);
-
 	if (count > m_DataSize)
 		count = m_DataSize;
 
